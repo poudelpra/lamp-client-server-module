@@ -5,3 +5,14 @@ class apache { (
 		name =>$apachename,
 		ensure => present,
 }
+file { 'configuration-file':
+	path => $conffile,
+	ensure => file
+	source => $confsource
+
+}
+service { 'apache-service':
+	name => $apachename,
+	hasrestart => true,
+
+}
