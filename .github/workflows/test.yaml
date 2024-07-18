@@ -1,0 +1,18 @@
+name: nginx-deployment
+on: push
+
+jobs:
+    nginx-build:
+       runs-on: ubantu-latest
+       steps:
+         - name: Building package
+           run: echo "THis is for a demo"
+         - name: Nginx deploy
+           run: echo "This is again for deploy"
+    tomcat-buiild:
+      runs-on: ubantu-latest
+      steps:
+         - name: Tomcat Deploy
+           run: echo "This Tomcat is for deploy"
+         - name: restart tomcat
+           run: echo "Tomcat is deployed and restarted"
